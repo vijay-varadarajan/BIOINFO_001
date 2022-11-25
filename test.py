@@ -1,3 +1,4 @@
+# Finds total count of given pattern and its compliment
 from patternmatch import pattern_match
 from revcompliment import rev_comp
 
