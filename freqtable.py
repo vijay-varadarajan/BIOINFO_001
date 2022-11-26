@@ -1,17 +1,23 @@
 from tabulate import tabulate
 
 def main():
-    freqtable = (freq_table(input("Text: "), int(input("k: "))))
+    freqtable = (freq_table(input("Filename: "), int(input("k: "))))
     print(tabulate(freqtable, headers='keys', tablefmt='pretty'))
+    
+    with open('freqtable_V_cholerae.txt', 'w') as file:
+        file.write(str(freq_table))
 
-def freq_table(txt, k):
+# Takes as input filename and k value
+# Gives a list of dictionaries containing the k mer with maximum repeats 
+def freq_table(name, k):
+    with open(name, 'r') as file:
+        txt = file.read()
+
     freqdict = []
-    for s in range(3, k+1):
+    for s in range(k, k+1):
         elements = {}
         for i in range(len(txt) - k):
-            cur_seq = ''
-            for j in range(i, s + i):
-                cur_seq += txt[j]
+            cur_seq = txt[i : s+i]
             
             if not elements:
                 elements[cur_seq] = 1

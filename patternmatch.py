@@ -12,9 +12,7 @@ def pattern_match(txt, pattern):
             
     positions = []
     for i in range(len(txt) - len(pattern) + 1):
-            cur_seq = ''
-            for j in range(i, i + len(pattern)):
-                    cur_seq += txt[j]
+            cur_seq = txt[i:i+len(pattern)]
 
             if cur_seq.upper() == pattern.upper():
                     positions.append(i)

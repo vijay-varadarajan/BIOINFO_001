@@ -1,0 +1,1 @@
+<function freq_table at 0x0000024726266DD0>

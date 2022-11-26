@@ -1,3 +1,7 @@
+# Code Challenge: Solve the Frequent Words Problem.
+# Input: A string Text and an integer k.
+# Output: All most frequent k-mers in Text.
+
 import sys
 
 def main():
@@ -8,13 +12,6 @@ def main():
     # opens file of name given in cmd line argument
     with open(txt, 'r') as file:
         line = file.read()
-    
-    '''
-    print()
-    for dic in output:
-        print(f"{dic['pattern']} : {dic['count']}\n")
-    '''
-
     # Computes the counts of each pattern and the pattern with maximum count
     # Store the pattern with maximum count in a file 
     counts, output = freq_words(k, str(line))
@@ -27,17 +24,12 @@ def main():
     for count in counts:
         if count['count'] >= 3:
             print(count)
-            with open("output.txt", 'a') as file:
-                file.write(str(count) + "\n")
-
 
 def freq_words(k, txt):
     counts = []
 
     for i in range(len(txt) - k + 1):
-        cur_seq = ''
-        for j in range(i, k + i):
-            cur_seq += txt[j]
+        cur_seq = txt[i: k+i]
     
         added = False
         for elem in counts:

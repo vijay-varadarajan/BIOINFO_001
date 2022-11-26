@@ -1,9 +1,4 @@
-MAX: {'pattern': 'acctaccac', 'count': 5, 'position': 185}
+MAX: {'pattern': 'tgatc', 'count': 8, 'position': 6}
+MAX: {'pattern': 'gatca', 'count': 8, 'position': 7}
 
 3 or more repeats: 
-{'pattern': 'tggtaggtt', 'count': 3, 'position': 69}
-{'pattern': 'ggtaggttt', 'count': 3, 'position': 70}
-{'pattern': 'aaacctacc', 'count': 3, 'position': 183}
-{'pattern': 'aacctacca', 'count': 3, 'position': 184}
-{'pattern': 'acctaccac', 'count': 5, 'position': 185}
-{'pattern': 'cctaccacc', 'count': 3, 'position': 186}
