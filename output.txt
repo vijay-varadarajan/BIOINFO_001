@@ -1,4 +1,0 @@
-MAX: {'pattern': 'tgatc', 'count': 8, 'position': 6}
-MAX: {'pattern': 'gatca', 'count': 8, 'position': 7}
-
-3 or more repeats: 

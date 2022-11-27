@@ -7,6 +7,8 @@ def clump_find(name, k, L, t):
     with open(name, 'r') as file:
         txt = file.read()
 
+    print(len(txt))
+
 
 if __name__ == "__main__":
     main()
